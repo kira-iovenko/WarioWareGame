@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://btfgrmt368574"]
 
+[ext_resource type="Script" uid="uid://bdnml6igselth" path="res://Scenes/timer_screen.gd" id="1_c7xwe"]
 [ext_resource type="Texture2D" uid="uid://hmfgk6v53x4h" path="res://avatar.png" id="1_cn3xy"]
 [ext_resource type="Texture2D" uid="uid://dcf6yrjf8mbix" path="res://icon.svg" id="2_c7xwe"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2fcgv"]
 
-[node name="level_scene" type="Node2D" unique_id=884215105]
+[node name="TimerScreen" type="Node2D" unique_id=884215105]
+script = ExtResource("1_c7xwe")
 
 [node name="Background" type="TextureRect" parent="." unique_id=2133068724]
 offset_right = 1152.0
@@ -22,29 +24,29 @@ texture = ExtResource("1_cn3xy")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=471853612]
+[node name="GarlicContainer" type="HBoxContainer" parent="." unique_id=471853612]
 offset_left = 256.0
 offset_top = 152.0
 offset_right = 912.0
 offset_bottom = 280.0
 
-[node name="Garlic1" type="TextureRect" parent="HBoxContainer" unique_id=1325584114]
+[node name="Garlic1" type="TextureRect" parent="GarlicContainer" unique_id=1325584114]
 layout_mode = 2
 texture = ExtResource("2_c7xwe")
 
-[node name="Garlic2" type="TextureRect" parent="HBoxContainer" unique_id=1440722409]
+[node name="Garlic2" type="TextureRect" parent="GarlicContainer" unique_id=1440722409]
 layout_mode = 2
 texture = ExtResource("2_c7xwe")
 
-[node name="Garlic3" type="TextureRect" parent="HBoxContainer" unique_id=1105821657]
+[node name="Garlic3" type="TextureRect" parent="GarlicContainer" unique_id=1105821657]
 layout_mode = 2
 texture = ExtResource("2_c7xwe")
 
-[node name="Garlic4" type="TextureRect" parent="HBoxContainer" unique_id=249954793]
+[node name="Garlic4" type="TextureRect" parent="GarlicContainer" unique_id=249954793]
 layout_mode = 2
 texture = ExtResource("2_c7xwe")
 
-[node name="Garlic5" type="TextureRect" parent="HBoxContainer" unique_id=1203837488]
+[node name="Garlic5" type="TextureRect" parent="GarlicContainer" unique_id=1203837488]
 layout_mode = 2
 texture = ExtResource("2_c7xwe")
 
