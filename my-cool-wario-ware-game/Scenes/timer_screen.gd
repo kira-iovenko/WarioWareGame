@@ -5,8 +5,8 @@ extends Node2D
 @onready var garlic_3: TextureRect = $GarlicContainer/Garlic3
 @onready var garlic_4: TextureRect = $GarlicContainer/Garlic4
 @onready var garlic_5: TextureRect = $GarlicContainer/Garlic5
-@onready var level: TextureRect = $Level
-@onready var timer: TextureRect = $Timer
+@onready var level: RichTextLabel = $Level
+@onready var timer: RichTextLabel = $Timer
 
 var time
 

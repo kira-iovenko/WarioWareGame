@@ -1,5 +1,7 @@
 extends Node2D
+@onready var timer: RichTextLabel = $timer
 
+var time : float
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,10 +12,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
-func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
-
-
-func _on_quit_pressed() -> void:
-	get_tree().quit()
+func Timer(start_time: float):
+	time = start_time
+	while time > 0.0:
+		await wait(0.1)
+		time -= 0.1
+	return
+	
+func wait(seconds: float) -> void:
+	await get_tree().create_timer(seconds).timeout
