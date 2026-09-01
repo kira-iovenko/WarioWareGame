@@ -119,24 +119,24 @@ shape = SubResource("RectangleShape2D_a4y0y")
 position = Vector2(74, 315)
 scale = Vector2(0.53988314, 0.53988314)
 
-[node name="Garlic" type="Node2D" parent="." unique_id=609273511]
+[node name="Garlic1" type="Node2D" parent="." unique_id=609273511]
 position = Vector2(5, 56)
 script = ExtResource("3_o6yob")
 
-[node name="Garlic" type="TextureRect" parent="Garlic" unique_id=369829122]
+[node name="Garlic" type="TextureRect" parent="Garlic1" unique_id=369829122]
 offset_left = 886.0
 offset_top = 305.0
 offset_right = 1014.0
 offset_bottom = 433.0
 texture = ExtResource("3_f6tb2")
 
-[node name="animation" type="AnimationPlayer" parent="Garlic" unique_id=493222454]
+[node name="animation" type="AnimationPlayer" parent="Garlic1" unique_id=493222454]
 libraries/ = SubResource("AnimationLibrary_0uv5o")
 
-[node name="Area2D" type="Area2D" parent="Garlic" unique_id=1226426935]
+[node name="Area2D" type="Area2D" parent="Garlic1" unique_id=1226426935]
 position = Vector2(950, 348)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Garlic/Area2D" unique_id=1846841439]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Garlic1/Area2D" unique_id=1846841439]
 position = Vector2(2, 17)
 shape = SubResource("CircleShape2D_a4y0y")
 
@@ -162,8 +162,7 @@ position = Vector2(-1, -4)
 shape = SubResource("CircleShape2D_a4y0y")
 
 [node name="Garlic3" type="Node2D" parent="." unique_id=955074600]
-visible = false
-position = Vector2(87, -159)
+position = Vector2(66, -177)
 script = ExtResource("3_o6yob")
 
 [node name="Garlic" type="TextureRect" parent="Garlic3" unique_id=537475677]

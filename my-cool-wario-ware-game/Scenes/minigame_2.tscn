@@ -28,5 +28,34 @@ offset_bottom = 186.0
 texture_normal = ExtResource("1_he4ew")
 script = ExtResource("3_rfxq2")
 
+[node name="Button_2" type="TextureButton" parent="." unique_id=1458397118]
+offset_left = 385.0
+offset_top = 188.0
+offset_right = 513.0
+offset_bottom = 316.0
+texture_normal = ExtResource("1_he4ew")
+script = ExtResource("3_rfxq2")
+
+[node name="Button_3" type="TextureButton" parent="." unique_id=1825556328]
+offset_left = 655.0
+offset_top = 81.0
+offset_right = 783.0
+offset_bottom = 209.0
+texture_normal = ExtResource("1_he4ew")
+script = ExtResource("3_rfxq2")
+
+[node name="Button_4" type="TextureButton" parent="." unique_id=1777263443]
+offset_left = 966.0
+offset_top = 207.0
+offset_right = 1094.0
+offset_bottom = 335.0
+texture_normal = ExtResource("1_he4ew")
+script = ExtResource("3_rfxq2")
+
 [node name="ThemedTimer" parent="." unique_id=1921969944 instance=ExtResource("2_l4g8r")]
 position = Vector2(679, -295)
+
+[connection signal="pressed" from="Button_1" to="Button_1" method="_on_pressed"]
+[connection signal="pressed" from="Button_2" to="Button_2" method="_on_pressed"]
+[connection signal="pressed" from="Button_3" to="Button_3" method="_on_pressed"]
+[connection signal="pressed" from="Button_4" to="Button_4" method="_on_pressed"]

@@ -6,6 +6,9 @@ var timer_end = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$Garlic1.garlic_collected.connect(garlic_collect)
+	$Garlic2.garlic_collected.connect(garlic_collect)
+	$Garlic3.garlic_collected.connect(garlic_collect)
 	await themed_timer.Timer(10.0)
 	timer_end = true
 
