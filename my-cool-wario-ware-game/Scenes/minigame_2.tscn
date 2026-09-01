@@ -1,3 +1,32 @@
 [gd_scene format=3 uid="uid://c1c0tanmo7bue"]
 
+[ext_resource type="Script" uid="uid://cud3dig6m3t0x" path="res://Scenes/minigame_2.gd" id="1_dfb65"]
+[ext_resource type="Texture2D" uid="uid://dcf6yrjf8mbix" path="res://icon.svg" id="1_he4ew"]
+[ext_resource type="PackedScene" uid="uid://bd6eprrbu1crh" path="res://Scenes/timer.tscn" id="2_l4g8r"]
+[ext_resource type="Script" uid="uid://dauettrctkebu" path="res://Scenes/button_1.gd" id="3_rfxq2"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_dfb65"]
+
 [node name="Minigame_2" type="Node2D" unique_id=1877830515]
+script = ExtResource("1_dfb65")
+
+[node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=697183872]
+repeat_size = Vector2(1000, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="Background" type="TextureRect" parent="ScrollingBackground" unique_id=1639503497]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = SubResource("PlaceholderTexture2D_dfb65")
+stretch_mode = 1
+
+[node name="Button_1" type="TextureButton" parent="." unique_id=338824079]
+offset_left = 74.0
+offset_top = 58.0
+offset_right = 202.0
+offset_bottom = 186.0
+texture_normal = ExtResource("1_he4ew")
+script = ExtResource("3_rfxq2")
+
+[node name="ThemedTimer" parent="." unique_id=1921969944 instance=ExtResource("2_l4g8r")]
+position = Vector2(679, -295)
