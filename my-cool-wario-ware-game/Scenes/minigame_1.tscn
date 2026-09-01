@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dolgs312w2khv" path="res://Scenes/player.tscn" id="2_11mgy"]
 [ext_resource type="Texture2D" uid="uid://dcf6yrjf8mbix" path="res://icon.svg" id="3_f6tb2"]
 [ext_resource type="Script" uid="uid://bq64tildhqvu" path="res://Scenes/garlic.gd" id="3_o6yob"]
+[ext_resource type="PackedScene" uid="uid://bd6eprrbu1crh" path="res://Scenes/timer.tscn" id="5_5txvl"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_f6tb2"]
 
@@ -76,7 +77,7 @@ position = Vector2(576, 20)
 shape = SubResource("RectangleShape2D_a4y0y")
 
 [node name="Platform_2" type="StaticBody2D" parent="." unique_id=1977305117]
-position = Vector2(575, 432)
+position = Vector2(584, 498)
 scale = Vector2(0.41393048, 0.8953386)
 
 [node name="ColorRect" type="ColorRect" parent="Platform_2" unique_id=1391912554]
@@ -89,7 +90,7 @@ position = Vector2(576, 20)
 shape = SubResource("RectangleShape2D_a4y0y")
 
 [node name="Platform_3" type="StaticBody2D" parent="." unique_id=1474535137]
-position = Vector2(315, 291)
+position = Vector2(316, 379)
 scale = Vector2(0.41393048, 0.8953386)
 
 [node name="ColorRect" type="ColorRect" parent="Platform_3" unique_id=999023426]
@@ -102,7 +103,7 @@ position = Vector2(576, 20)
 shape = SubResource("RectangleShape2D_a4y0y")
 
 [node name="Platform_4" type="StaticBody2D" parent="." unique_id=1495468993]
-position = Vector2(74, 135)
+position = Vector2(654, 259.99997)
 scale = Vector2(0.41393048, 0.8953386)
 
 [node name="ColorRect" type="ColorRect" parent="Platform_4" unique_id=147286000]
@@ -115,9 +116,11 @@ position = Vector2(576, 20)
 shape = SubResource("RectangleShape2D_a4y0y")
 
 [node name="Player" parent="." unique_id=576311829 instance=ExtResource("2_11mgy")]
-position = Vector2(66, 537)
+position = Vector2(74, 315)
+scale = Vector2(0.53988314, 0.53988314)
 
 [node name="Garlic" type="Node2D" parent="." unique_id=609273511]
+position = Vector2(5, 56)
 script = ExtResource("3_o6yob")
 
 [node name="Garlic" type="TextureRect" parent="Garlic" unique_id=369829122]
@@ -134,11 +137,11 @@ libraries/ = SubResource("AnimationLibrary_0uv5o")
 position = Vector2(950, 348)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Garlic/Area2D" unique_id=1846841439]
-position = Vector2(-1, -4)
+position = Vector2(2, 17)
 shape = SubResource("CircleShape2D_a4y0y")
 
 [node name="Garlic2" type="Node2D" parent="." unique_id=2034808057]
-position = Vector2(-273, -118)
+position = Vector2(-529, -34)
 script = ExtResource("3_o6yob")
 
 [node name="Garlic" type="TextureRect" parent="Garlic2" unique_id=22189330]
@@ -159,7 +162,7 @@ position = Vector2(-1, -4)
 shape = SubResource("CircleShape2D_a4y0y")
 
 [node name="Garlic3" type="Node2D" parent="." unique_id=955074600]
-position = Vector2(-555, -273)
+position = Vector2(87, -159)
 script = ExtResource("3_o6yob")
 
 [node name="Garlic" type="TextureRect" parent="Garlic3" unique_id=537475677]
@@ -178,3 +181,6 @@ position = Vector2(950, 348)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Garlic3/Area2D" unique_id=2013710788]
 position = Vector2(-1, -4)
 shape = SubResource("CircleShape2D_a4y0y")
+
+[node name="ThemedTimer" parent="." unique_id=61089255 instance=ExtResource("5_5txvl")]
+position = Vector2(-555, -273)

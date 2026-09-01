@@ -1,23 +1,28 @@
 extends Node2D
-@onready var timer: RichTextLabel = $timer
+@onready var themed_timer: Node2D = $ThemedTimer
 
-var time : float
+var garlic_collected = 0
+var timer_end = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	await themed_timer.Timer(10.0)
+	timer_end = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-
-func Timer(start_time: float):
-	time = start_time
-	while time > 0.0:
-		await wait(0.1)
-		time -= 0.1
-	return
+	if garlic_collected == 3:
+		if Global.minigames_done > 3:
+			get_tree().change_scene_to_file("res://Scenes/done_screen.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
 	
-func wait(seconds: float) -> void:
-	await get_tree().create_timer(seconds).timeout
+	if timer_end:
+		Global.minigames_done -= 1
+		Global.lives -= 1
+		get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
+
+func garlic_collect() -> void:
+	garlic_collected += 1
+	return
