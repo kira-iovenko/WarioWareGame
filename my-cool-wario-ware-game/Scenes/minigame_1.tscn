@@ -162,6 +162,7 @@ position = Vector2(-1, -4)
 shape = SubResource("CircleShape2D_a4y0y")
 
 [node name="Garlic3" type="Node2D" parent="." unique_id=955074600]
+visible = false
 position = Vector2(87, -159)
 script = ExtResource("3_o6yob")
 
