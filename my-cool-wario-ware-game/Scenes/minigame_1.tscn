@@ -183,4 +183,4 @@ position = Vector2(-1, -4)
 shape = SubResource("CircleShape2D_a4y0y")
 
 [node name="ThemedTimer" parent="." unique_id=61089255 instance=ExtResource("5_5txvl")]
-position = Vector2(-555, -273)
+position = Vector2(496, 31)
