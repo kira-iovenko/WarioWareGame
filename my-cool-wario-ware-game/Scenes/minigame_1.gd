@@ -9,7 +9,7 @@ func _ready() -> void:
 	$Garlic1.garlic_collected.connect(garlic_collect)
 	$Garlic2.garlic_collected.connect(garlic_collect)
 	$Garlic3.garlic_collected.connect(garlic_collect)
-	await themed_timer.Timer(10.0)
+	await themed_timer.Timer(5.0)
 	timer_end = true
 
 
@@ -24,7 +24,10 @@ func _process(delta: float) -> void:
 	if timer_end:
 		Global.minigames_done -= 1
 		Global.lives -= 1
-		get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
+		if Global.lives > 0:
+			get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
+		else:
+			get_tree().change_scene_to_file("res://Scenes/fail_screen.tscn")
 
 func garlic_collect() -> void:
 	garlic_collected += 1

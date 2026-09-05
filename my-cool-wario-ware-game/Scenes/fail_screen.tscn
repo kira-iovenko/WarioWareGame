@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://8u555sfgnyfd"]
 
 [ext_resource type="Texture2D" uid="uid://hmfgk6v53x4h" path="res://avatar.png" id="1_7ctyi"]
+[ext_resource type="Script" uid="uid://oudr550jobhy" path="res://Scenes/play_again.gd" id="2_fg7so"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_3rr80"]
 
@@ -17,10 +18,10 @@ texture = SubResource("PlaceholderTexture2D_3rr80")
 stretch_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1806769510]
-offset_left = 580.0
-offset_top = 146.0
-offset_right = 812.0
-offset_bottom = 378.0
+offset_left = 469.0
+offset_top = 92.0
+offset_right = 701.0
+offset_bottom = 324.0
 texture = ExtResource("1_7ctyi")
 expand_mode = 1
 stretch_mode = 4
@@ -34,3 +35,20 @@ offset_bottom = 392.0
 theme_override_constants/outline_size = 20
 theme_override_font_sizes/normal_font_size = 42
 text = "You Failed :("
+
+[node name="PlayAgain" type="Node2D" parent="." unique_id=719724212]
+script = ExtResource("2_fg7so")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayAgain" unique_id=595855850]
+offset_left = 336.0
+offset_top = 496.0
+offset_right = 880.0
+offset_bottom = 568.0
+
+[node name="PlayAgain" type="Button" parent="PlayAgain/VBoxContainer" unique_id=1610055442]
+layout_mode = 2
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 40
+text = "Play Again"
+
+[connection signal="pressed" from="PlayAgain/VBoxContainer/PlayAgain" to="PlayAgain" method="_on_play_again_pressed"]
