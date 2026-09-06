@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://qm5xkh3rx8ak"]
 
-[ext_resource type="Texture2D" uid="uid://hmfgk6v53x4h" path="res://avatar.png" id="1_klylv"]
 [ext_resource type="Script" uid="uid://c1xt53ba1h360" path="res://Scenes/title_screen.gd" id="1_p3fck"]
+[ext_resource type="Texture2D" uid="uid://6kp8xlqj76y1" path="res://character.png" id="2_p3fck"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_iubmq"]
 
@@ -16,10 +16,11 @@ stretch_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="Background" unique_id=2060833632]
 layout_mode = 0
-offset_top = 416.0
-offset_right = 232.0
-offset_bottom = 648.0
-texture = ExtResource("1_klylv")
+offset_left = -168.0
+offset_top = 160.0
+offset_right = 456.0
+offset_bottom = 784.0
+texture = ExtResource("2_p3fck")
 expand_mode = 1
 stretch_mode = 4
 
