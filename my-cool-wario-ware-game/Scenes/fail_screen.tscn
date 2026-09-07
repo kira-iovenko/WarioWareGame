@@ -1,37 +1,33 @@
 [gd_scene format=3 uid="uid://8u555sfgnyfd"]
 
-[ext_resource type="Texture2D" uid="uid://hmfgk6v53x4h" path="res://avatar.png" id="1_7ctyi"]
+[ext_resource type="Texture2D" uid="uid://chqwjxhgvyu07" path="res://background.png" id="1_qgjdb"]
+[ext_resource type="Texture2D" uid="uid://bjpb4htgkxu3w" path="res://fail.png" id="2_3e32n"]
 [ext_resource type="Script" uid="uid://oudr550jobhy" path="res://Scenes/play_again.gd" id="2_fg7so"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_3rr80"]
 
 [node name="FailScreen" type="Node2D" unique_id=455765560]
 
-[node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=1208344747]
-repeat_size = Vector2(1000, 0)
-autoscroll = Vector2(100, 0)
-
-[node name="Background" type="TextureRect" parent="ScrollingBackground" unique_id=27085476]
+[node name="Background" type="TextureRect" parent="." unique_id=1926471975]
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = SubResource("PlaceholderTexture2D_3rr80")
+texture = ExtResource("1_qgjdb")
 stretch_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1806769510]
-offset_left = 469.0
-offset_top = 92.0
-offset_right = 701.0
-offset_bottom = 324.0
-texture = ExtResource("1_7ctyi")
+[node name="TextureRect" type="TextureRect" parent="Background" unique_id=860684096]
+layout_mode = 0
+offset_left = 286.0
+offset_top = -118.0
+offset_right = 910.0
+offset_bottom = 506.0
+texture = ExtResource("2_3e32n")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Failed!" type="RichTextLabel" parent="TextureRect" unique_id=157925930]
+[node name="Failed!" type="RichTextLabel" parent="Background" unique_id=157925930]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 284.0
-offset_right = 310.0
-offset_bottom = 392.0
+offset_left = 474.0
+offset_top = 376.0
+offset_right = 779.0
+offset_bottom = 484.0
 theme_override_constants/outline_size = 20
 theme_override_font_sizes/normal_font_size = 42
 text = "You Failed :("

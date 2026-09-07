@@ -16,7 +16,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if garlic_collected == 3:
-		if Global.minigames_done > 3:
+		if Global.minigames_done == 3:
 			get_tree().change_scene_to_file("res://Scenes/done_screen.tscn")
 		else:
 			get_tree().change_scene_to_file("res://Scenes/timer_screen.tscn")
