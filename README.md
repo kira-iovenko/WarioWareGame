@@ -2,6 +2,10 @@
 
 SmileyWare is a collection of fast-paced minigames inspired by the WarioWare style of gameplay. Each challenge is part of one connected game experience where players need to complete the minigames and keep progressing.
 
+## Demo
+
+https://kira-iovenko.github.io/WarioWareGame/
+
 ## Screenshots
 
 ### Title screen

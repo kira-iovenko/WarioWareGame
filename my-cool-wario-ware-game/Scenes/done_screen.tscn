@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bw2qtmlish1i6"]
 
 [ext_resource type="Texture2D" uid="uid://chqwjxhgvyu07" path="res://background.png" id="1_1q1k2"]
-[ext_resource type="Texture2D" uid="uid://hmfgk6v53x4h" path="res://avatar.png" id="1_en6tx"]
+[ext_resource type="Texture2D" uid="uid://bk3cs6f7p4imt" path="res://win.png" id="2_1q1k2"]
 [ext_resource type="Script" uid="uid://oudr550jobhy" path="res://Scenes/play_again.gd" id="2_3rr80"]
 
 [node name="DoneScreen" type="Node2D" unique_id=455765560]
@@ -12,25 +12,22 @@ offset_bottom = 648.0
 texture = ExtResource("1_1q1k2")
 stretch_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="Background" unique_id=1806769510]
+[node name="Done" type="RichTextLabel" parent="Background" unique_id=157925930]
 layout_mode = 0
-offset_left = 489.0
-offset_top = 103.0
-offset_right = 721.0
-offset_bottom = 335.0
-texture = ExtResource("1_en6tx")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="Done" type="RichTextLabel" parent="Background/TextureRect" unique_id=157925930]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 284.0
-offset_right = 239.0
-offset_bottom = 356.0
+offset_left = 431.0
+offset_top = 359.0
+offset_right = 792.0
+offset_bottom = 485.0
 theme_override_constants/outline_size = 20
 theme_override_font_sizes/normal_font_size = 42
-text = "Well Done!"
+text = "Congrats!
+You Nailed It!"
+horizontal_alignment = 1
+
+[node name="Win" type="Sprite2D" parent="Background" unique_id=655244884]
+position = Vector2(616.00006, 228)
+scale = Vector2(1.926352, 1.9557524)
+texture = ExtResource("2_1q1k2")
 
 [node name="PlayAgain" type="Node2D" parent="." unique_id=465103840]
 script = ExtResource("2_3rr80")
