@@ -31,6 +31,7 @@ jobs:
         with:
           version: "4.7.2"
           use-dotnet: false
+          include-templates: true
       
       - name: Import Godot project
         run: |
