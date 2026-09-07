@@ -3,9 +3,26 @@ extends Node2D
 
 var garlic_collected = 0
 var timer_end = false
+var positions = [
+	Vector2(50, 100),
+	Vector2(270, 100),
+	Vector2(730, 100),
+	Vector2(950, 100),
+	Vector2(50, 270),
+	Vector2(950, 270),
+	Vector2(50, 450),
+	Vector2(270, 450),
+	Vector2(730, 450),
+	Vector2(950, 450),
+]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	positions.shuffle()
+	$Garlic1.position = positions[0]	
+	$Garlic2.position = positions[1]	
+	$Garlic3.position = positions[2]	
+	
 	$Garlic1.garlic_collected.connect(garlic_collect)
 	$Garlic2.garlic_collected.connect(garlic_collect)
 	$Garlic3.garlic_collected.connect(garlic_collect)
