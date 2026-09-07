@@ -39,6 +39,9 @@ jobs:
             --path my-cool-wario-ware-game \
             --editor \
             --quit
+
+      - name: Create web export folder
+        run: mkdir -p smileyware-web
       
       - name: Export SmileyWare for Web
         run: |
