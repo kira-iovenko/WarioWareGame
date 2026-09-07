@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://qm5xkh3rx8ak"]
 
 [ext_resource type="Script" uid="uid://c1xt53ba1h360" path="res://Scenes/title_screen.gd" id="1_p3fck"]
+[ext_resource type="Texture2D" uid="uid://chqwjxhgvyu07" path="res://background.png" id="2_4gxqj"]
 [ext_resource type="Texture2D" uid="uid://6kp8xlqj76y1" path="res://character.png" id="2_p3fck"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_iubmq"]
 
 [node name="TitleScreen" type="Node2D" unique_id=1245615211]
 script = ExtResource("1_p3fck")
@@ -11,7 +10,7 @@ script = ExtResource("1_p3fck")
 [node name="Background" type="TextureRect" parent="." unique_id=2001573473]
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = SubResource("PlaceholderTexture2D_iubmq")
+texture = ExtResource("2_4gxqj")
 stretch_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="Background" unique_id=2060833632]

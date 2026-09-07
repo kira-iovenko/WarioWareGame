@@ -6,6 +6,7 @@
 script = ExtResource("1_pvhx5")
 
 [node name="timer" type="RichTextLabel" parent="." unique_id=1655222452]
+clip_contents = false
 offset_right = 98.0
 offset_bottom = 66.0
 theme_override_constants/outline_size = 20

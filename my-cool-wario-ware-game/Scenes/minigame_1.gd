@@ -9,7 +9,7 @@ func _ready() -> void:
 	$Garlic1.garlic_collected.connect(garlic_collect)
 	$Garlic2.garlic_collected.connect(garlic_collect)
 	$Garlic3.garlic_collected.connect(garlic_collect)
-	await themed_timer.Timer(5.0)
+	await themed_timer.Timer(7.0)
 	timer_end = true
 
 

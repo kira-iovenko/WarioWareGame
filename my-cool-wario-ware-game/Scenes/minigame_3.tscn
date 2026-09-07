@@ -3,11 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://47b1fvb18leu" path="res://Scenes/player_topdown.tscn" id="1_h40nw"]
 [ext_resource type="Script" uid="uid://ctm56a0e6oaf3" path="res://Scenes/minigame_3.gd" id="1_lr4ld"]
 [ext_resource type="Script" uid="uid://df2cc57sh3i8h" path="res://Scenes/player_topdown.gd" id="2_ihkhm"]
+[ext_resource type="Texture2D" uid="uid://chqwjxhgvyu07" path="res://background.png" id="2_rpf30"]
 [ext_resource type="PackedScene" uid="uid://bd6eprrbu1crh" path="res://Scenes/timer.tscn" id="3_6sdpr"]
 [ext_resource type="Script" uid="uid://bq64tildhqvu" path="res://Scenes/garlic.gd" id="4_lr4ld"]
-[ext_resource type="Texture2D" uid="uid://dcf6yrjf8mbix" path="res://icon.svg" id="5_rpf30"]
+[ext_resource type="Texture2D" uid="uid://daxk1faiietyk" path="res://star.png" id="7_y6mal"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_m0bfa"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_h684j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_asmx3"]
 size = Vector2(1150, 40)
@@ -28,7 +29,7 @@ size = Vector2(178, 279)
 size = Vector2(176.99998, 280)
 
 [sub_resource type="Animation" id="Animation_o6yob"]
-length = 0.001
+length = 1.1333333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -73,13 +74,15 @@ metadata/_edit_horizontal_guides_ = [436.0, 258.0]
 metadata/_edit_vertical_guides_ = [576.0]
 
 [node name="Background" type="TextureRect" parent="." unique_id=1518930783]
+offset_top = -2.0
 offset_right = 1152.0
-offset_bottom = 648.0
-texture = SubResource("PlaceholderTexture2D_m0bfa")
+offset_bottom = 646.0
+texture = ExtResource("2_rpf30")
 stretch_mode = 1
 
 [node name="Wall" type="StaticBody2D" parent="." unique_id=631552283]
 position = Vector2(0, 608)
+physics_material_override = SubResource("PhysicsMaterial_h684j")
 
 [node name="ColorRect" type="ColorRect" parent="Wall" unique_id=811361937]
 offset_right = 1152.0
@@ -169,11 +172,12 @@ position = Vector2(61, 149)
 script = ExtResource("4_lr4ld")
 
 [node name="Garlic" type="TextureRect" parent="Garlic1" unique_id=841597372]
-offset_left = 886.0
-offset_top = 305.0
-offset_right = 1014.0
-offset_bottom = 433.0
-texture = ExtResource("5_rpf30")
+offset_left = 879.0
+offset_top = 289.0
+offset_right = 1026.0
+offset_bottom = 427.0
+texture = ExtResource("7_y6mal")
+expand_mode = 2
 
 [node name="animation" type="AnimationPlayer" parent="Garlic1" unique_id=596651861]
 libraries/ = SubResource("AnimationLibrary_y6mal")
@@ -190,11 +194,12 @@ position = Vector2(-818, -170)
 script = ExtResource("4_lr4ld")
 
 [node name="Garlic" type="TextureRect" parent="Garlic2" unique_id=506986379]
-offset_left = 886.0
-offset_top = 305.0
-offset_right = 1014.0
-offset_bottom = 433.0
-texture = ExtResource("5_rpf30")
+offset_left = 877.0
+offset_top = 266.0
+offset_right = 1020.0
+offset_bottom = 410.0
+texture = ExtResource("7_y6mal")
+expand_mode = 4
 
 [node name="animation" type="AnimationPlayer" parent="Garlic2" unique_id=1530751792]
 libraries/ = SubResource("AnimationLibrary_y6mal")
@@ -211,11 +216,12 @@ position = Vector2(74, -153)
 script = ExtResource("4_lr4ld")
 
 [node name="Garlic" type="TextureRect" parent="Garlic3" unique_id=540118606]
-offset_left = 886.0
-offset_top = 305.0
-offset_right = 1014.0
-offset_bottom = 433.0
-texture = ExtResource("5_rpf30")
+offset_left = 875.0
+offset_top = 267.0
+offset_right = 1024.8594
+offset_bottom = 406.0
+texture = ExtResource("7_y6mal")
+expand_mode = 2
 
 [node name="animation" type="AnimationPlayer" parent="Garlic3" unique_id=2064756398]
 libraries/ = SubResource("AnimationLibrary_y6mal")

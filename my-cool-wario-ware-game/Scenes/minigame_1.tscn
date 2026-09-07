@@ -2,17 +2,17 @@
 
 [ext_resource type="Script" uid="uid://oqldex8wjlu3" path="res://Scenes/minigame_1.gd" id="1_enoba"]
 [ext_resource type="PackedScene" uid="uid://dolgs312w2khv" path="res://Scenes/player.tscn" id="2_11mgy"]
-[ext_resource type="Texture2D" uid="uid://dcf6yrjf8mbix" path="res://icon.svg" id="3_f6tb2"]
+[ext_resource type="Texture2D" uid="uid://chqwjxhgvyu07" path="res://background.png" id="2_ojqsy"]
+[ext_resource type="Texture2D" uid="uid://hkgnwy1rra" path="res://platform.png" id="3_jmcek"]
 [ext_resource type="Script" uid="uid://bq64tildhqvu" path="res://Scenes/garlic.gd" id="3_o6yob"]
 [ext_resource type="PackedScene" uid="uid://bd6eprrbu1crh" path="res://Scenes/timer.tscn" id="5_5txvl"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_f6tb2"]
+[ext_resource type="Texture2D" uid="uid://daxk1faiietyk" path="res://star.png" id="6_ojqsy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a4y0y"]
 size = Vector2(1152, 40)
 
 [sub_resource type="Animation" id="Animation_o6yob"]
-length = 0.001
+length = 1.1333333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -61,13 +61,14 @@ autoscroll = Vector2(100, 0)
 [node name="Background" type="TextureRect" parent="ScrollingBackground" unique_id=229971349]
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = SubResource("PlaceholderTexture2D_f6tb2")
+texture = ExtResource("2_ojqsy")
 stretch_mode = 1
 
 [node name="Platform_1" type="StaticBody2D" parent="." unique_id=446391134]
 position = Vector2(0, 608)
 
 [node name="ColorRect" type="ColorRect" parent="Platform_1" unique_id=1802363356]
+visible = false
 offset_right = 1152.0
 offset_bottom = 40.0
 color = Color(0.082252584, 0.42721984, 0.48658913, 1)
@@ -76,11 +77,20 @@ color = Color(0.082252584, 0.42721984, 0.48658913, 1)
 position = Vector2(576, 20)
 shape = SubResource("RectangleShape2D_a4y0y")
 
+[node name="TextureRect" type="TextureRect" parent="Platform_1" unique_id=1854241154]
+offset_top = 0.99999994
+offset_right = 2865.6714
+offset_bottom = 98.0
+scale = Vector2(0.402, 0.4)
+texture = ExtResource("3_jmcek")
+stretch_mode = 1
+
 [node name="Platform_2" type="StaticBody2D" parent="." unique_id=1977305117]
-position = Vector2(584, 498)
+position = Vector2(575, 453)
 scale = Vector2(0.41393048, 0.8953386)
 
 [node name="ColorRect" type="ColorRect" parent="Platform_2" unique_id=1391912554]
+visible = false
 offset_right = 1152.0
 offset_bottom = 40.0
 color = Color(0.082252584, 0.42721984, 0.48658913, 1)
@@ -89,11 +99,20 @@ color = Color(0.082252584, 0.42721984, 0.48658913, 1)
 position = Vector2(576, 20)
 shape = SubResource("RectangleShape2D_a4y0y")
 
+[node name="TextureRect" type="TextureRect" parent="Platform_2" unique_id=388143345]
+offset_left = -7.1287155e-05
+offset_right = 2797.009
+offset_bottom = 97.0
+scale = Vector2(0.412, 0.41)
+texture = ExtResource("3_jmcek")
+stretch_mode = 1
+
 [node name="Platform_3" type="StaticBody2D" parent="." unique_id=1474535137]
-position = Vector2(316, 379)
+position = Vector2(270, 309)
 scale = Vector2(0.41393048, 0.8953386)
 
 [node name="ColorRect" type="ColorRect" parent="Platform_3" unique_id=999023426]
+visible = false
 offset_right = 1152.0
 offset_bottom = 40.0
 color = Color(0.082252584, 0.42721984, 0.48658913, 1)
@@ -102,11 +121,20 @@ color = Color(0.082252584, 0.42721984, 0.48658913, 1)
 position = Vector2(576, 20)
 shape = SubResource("RectangleShape2D_a4y0y")
 
+[node name="TextureRect" type="TextureRect" parent="Platform_3" unique_id=1520111424]
+offset_left = -1.859665e-05
+offset_right = 2797.0088
+offset_bottom = 97.0
+scale = Vector2(0.412, 0.41)
+texture = ExtResource("3_jmcek")
+stretch_mode = 1
+
 [node name="Platform_4" type="StaticBody2D" parent="." unique_id=1495468993]
-position = Vector2(654, 259.99997)
+position = Vector2(649, 158.00003)
 scale = Vector2(0.41393048, 0.8953386)
 
 [node name="ColorRect" type="ColorRect" parent="Platform_4" unique_id=147286000]
+visible = false
 offset_right = 1152.0
 offset_bottom = 40.0
 color = Color(0.082252584, 0.42721984, 0.48658913, 1)
@@ -115,20 +143,31 @@ color = Color(0.082252584, 0.42721984, 0.48658913, 1)
 position = Vector2(576, 20)
 shape = SubResource("RectangleShape2D_a4y0y")
 
+[node name="TextureRect" type="TextureRect" parent="Platform_4" unique_id=869451410]
+offset_left = -5.7697296e-05
+offset_top = 3.71933e-05
+offset_right = 2797.0088
+offset_bottom = 97.00004
+scale = Vector2(0.412, 0.41)
+texture = ExtResource("3_jmcek")
+stretch_mode = 1
+
 [node name="Player" parent="." unique_id=576311829 instance=ExtResource("2_11mgy")]
 position = Vector2(74, 315)
 scale = Vector2(0.53988314, 0.53988314)
 
 [node name="Garlic1" type="Node2D" parent="." unique_id=609273511]
-position = Vector2(5, 56)
+position = Vector2(503, 232)
+scale = Vector2(0.5, 0.5)
 script = ExtResource("3_o6yob")
 
 [node name="Garlic" type="TextureRect" parent="Garlic1" unique_id=369829122]
 offset_left = 886.0
 offset_top = 305.0
-offset_right = 1014.0
-offset_bottom = 433.0
-texture = ExtResource("3_f6tb2")
+offset_right = 1093.0
+offset_bottom = 499.0
+scale = Vector2(0.69891584, 0.7480367)
+texture = ExtResource("6_ojqsy")
 
 [node name="animation" type="AnimationPlayer" parent="Garlic1" unique_id=493222454]
 libraries/ = SubResource("AnimationLibrary_0uv5o")
@@ -137,49 +176,53 @@ libraries/ = SubResource("AnimationLibrary_0uv5o")
 position = Vector2(950, 348)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Garlic1/Area2D" unique_id=1846841439]
-position = Vector2(2, 17)
+position = Vector2(-1, 14)
 shape = SubResource("CircleShape2D_a4y0y")
 
-[node name="Garlic2" type="Node2D" parent="." unique_id=2034808057]
-position = Vector2(-529, -34)
+[node name="Garlic2" type="Node2D" parent="." unique_id=1749987375]
+position = Vector2(-124, 88)
+scale = Vector2(0.5, 0.5)
 script = ExtResource("3_o6yob")
 
-[node name="Garlic" type="TextureRect" parent="Garlic2" unique_id=22189330]
+[node name="Garlic" type="TextureRect" parent="Garlic2" unique_id=727691004]
 offset_left = 886.0
 offset_top = 305.0
-offset_right = 1014.0
-offset_bottom = 433.0
-texture = ExtResource("3_f6tb2")
+offset_right = 1093.0
+offset_bottom = 499.0
+scale = Vector2(0.69891584, 0.7480367)
+texture = ExtResource("6_ojqsy")
 
-[node name="animation" type="AnimationPlayer" parent="Garlic2" unique_id=2119877141]
+[node name="animation" type="AnimationPlayer" parent="Garlic2" unique_id=140401531]
 libraries/ = SubResource("AnimationLibrary_0uv5o")
 
-[node name="Area2D" type="Area2D" parent="Garlic2" unique_id=252822162]
+[node name="Area2D" type="Area2D" parent="Garlic2" unique_id=241679574]
 position = Vector2(950, 348)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Garlic2/Area2D" unique_id=1722109292]
-position = Vector2(-1, -4)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Garlic2/Area2D" unique_id=1410913672]
+position = Vector2(-1, 14)
 shape = SubResource("CircleShape2D_a4y0y")
 
-[node name="Garlic3" type="Node2D" parent="." unique_id=955074600]
-position = Vector2(66, -177)
+[node name="Garlic3" type="Node2D" parent="." unique_id=344820023]
+position = Vector2(603, -64)
+scale = Vector2(0.5, 0.5)
 script = ExtResource("3_o6yob")
 
-[node name="Garlic" type="TextureRect" parent="Garlic3" unique_id=537475677]
+[node name="Garlic" type="TextureRect" parent="Garlic3" unique_id=1292707213]
 offset_left = 886.0
 offset_top = 305.0
-offset_right = 1014.0
-offset_bottom = 433.0
-texture = ExtResource("3_f6tb2")
+offset_right = 1093.0
+offset_bottom = 499.0
+scale = Vector2(0.69891584, 0.7480367)
+texture = ExtResource("6_ojqsy")
 
-[node name="animation" type="AnimationPlayer" parent="Garlic3" unique_id=1791491994]
+[node name="animation" type="AnimationPlayer" parent="Garlic3" unique_id=1490148625]
 libraries/ = SubResource("AnimationLibrary_0uv5o")
 
-[node name="Area2D" type="Area2D" parent="Garlic3" unique_id=1704345179]
+[node name="Area2D" type="Area2D" parent="Garlic3" unique_id=1554132301]
 position = Vector2(950, 348)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Garlic3/Area2D" unique_id=2013710788]
-position = Vector2(-1, -4)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Garlic3/Area2D" unique_id=1947731851]
+position = Vector2(-1, 14)
 shape = SubResource("CircleShape2D_a4y0y")
 
 [node name="ThemedTimer" parent="." unique_id=61089255 instance=ExtResource("5_5txvl")]
